@@ -14,3 +14,25 @@ def is_classic(book):
         return True
     else:
           return False
+    
+book1 = create_book("Holes", 1998, "Unknown")
+
+print(is_classic(book1))
+
+library = []
+
+def add_book(book):
+    library.append(book)
+
+def remove_book(title):
+    for book in library:
+        if book["title"] == title:
+            library.remove(book)
+            return
+    print(f"Book with title '{title}' not found in library.")
+
+def all_genres():
+    genre=set()
+    for book in library:
+        genre.add(book["genre"])
+    return genre
