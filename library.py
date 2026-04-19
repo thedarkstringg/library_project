@@ -50,3 +50,14 @@ def book_iterator(genre_filter=None):
             yield book
 
 #Task 4
+import json
+def save_library(filename = "file.json"):
+    with open_file(filename, "w", encoding = "utf-8") as file:
+        json.dump(library, file, indeint=2)
+try: 
+    with open ("file.json", "r", encoding="utf-8") as file:
+        library = json.load(file)
+except FileNotFoundError:
+    print("No existing library found. Starting with an empty library.")
+
+#Task 5
