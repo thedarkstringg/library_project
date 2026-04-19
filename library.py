@@ -87,4 +87,5 @@ class Book:
     def is_classic(self):
         if self.year< 1950:
             return True
+        
 book1 = Book("Holes", "1998", "Stephen Curry", "Adventure", True)
