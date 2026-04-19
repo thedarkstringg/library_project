@@ -61,3 +61,16 @@ except FileNotFoundError:
     print("No existing library found. Starting with an empty library.")
 
 #Task 5
+import os
+from datetime import timedelta
+import datetime
+import sys
+import math
+
+now = datetime.datetime.now()
+
+print(f"Current date and time: {now}")
+
+week_later = now + timedelta(days=7)
+print(week_later)
+
