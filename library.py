@@ -74,3 +74,17 @@ print(f"Current date and time: {now}")
 week_later = now + timedelta(days=7)
 print(week_later)
 
+#Task 6
+class Book:
+    def __init__(self, title, year, author, genre, is_read):
+        self.title = title
+        self.year = year
+        self.author = author
+        self.genre = genre
+        self.is_read = is_read
+    def mark_read(self):
+        self.is_read = True
+    def is_classic(self):
+        if self.year< 1950:
+            return True
+book1 = Book("Holes", "1998", "Stephen Curry", "Adventure", True)
