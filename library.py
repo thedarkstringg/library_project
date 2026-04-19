@@ -89,3 +89,14 @@ class Book:
             return True
         
 book1 = Book("Holes", "1998", "Stephen Curry", "Adventure", True)
+
+#Task 7
+class Ebook(Book):
+    def __init__(self, filesize):
+        super().__init__(title, year, author, genre, is_read)
+        self.filesize = filesize
+class AudioBook(Book):
+    def __init__(self, narrator, duration):
+        super().__init__(title, year, author, genre, is_read)
+        self.narrator = narrator
+        self.duration = duration
