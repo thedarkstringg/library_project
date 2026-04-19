@@ -77,7 +77,7 @@ print(week_later)
 #Task 6
 class Book:
     def __init__(self, title, year, author, genre, is_read):
-        self.title = title
+        self.title = titlee
         self.year = year
         self.author = author
         self.genre = genre
@@ -92,12 +92,12 @@ book1 = Book("Holes", "1998", "Stephen Curry", "Adventure", True)
 
 #Task 7
 class Ebook(Book):
-    def __init__(self, filesize):
+    def __init__(self, title, year, author, genre, is_read, filesize):
         super().__init__(title, year, author, genre, is_read)
         self.filesize = filesize
-        
+
 class AudioBook(Book):
-    def __init__(self, narrator, duration):
+    def __init__(self,  title, year, author, genre, is_read, narrator, duration):
         super().__init__(title, year, author, genre, is_read)
         self.narrator = narrator
         self.duration = duration
