@@ -3,6 +3,7 @@ version = '0.1.0'
 is_active = True
 book_count = 0
 
+#Task 1
 print(f"App name: '{app_name}', version: {version}")
 
 def create_book(title, year, author, genre = "Unknown"):
@@ -14,7 +15,8 @@ def is_classic(book):
         return True
     else:
           return False
-    
+
+# Task 2    
 book1 = create_book("Holes", 1998, "Unknown")
 
 print(is_classic(book1))
@@ -36,3 +38,15 @@ def all_genres():
     for book in library:
         genre.add(book["genre"])
     return genre
+
+#Task 3
+classic_books= [book["title"] for book in library if book["year"] < 1950]
+
+authors = [book["authors"] for book in library]
+
+def book_iterator(genre_filter=None):
+    for book in library:
+        if genre_filter is None or book["genre"] == genre_filter:
+            yield book
+
+#Task 4
